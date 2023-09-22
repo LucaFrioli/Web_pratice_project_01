@@ -1,0 +1,6 @@
+Página de contato (contato.html):
+    Cabeçalho com o logotipo da empresa e menu de navegação.[x]
+    Formulário de contato com campos para nome, e-mail, mensagem e um botão de envio.[x]
+    Informações de contato adicionais, como endereço e telefone.[x] 
+    Mapa com a localização da loja.[x]
+    Rodapé com informações de contato e links para redes sociais.[x]

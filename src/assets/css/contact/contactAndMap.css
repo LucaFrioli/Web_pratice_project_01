@@ -1,0 +1,99 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+body {
+    background-color: var(--color-neutral-30);
+}
+
+div.contactFormAndMap {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem 3rem;
+}
+
+div.cardContactUS {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color-neutral-0);
+    padding: 1.75rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+div.contactUsForm {
+    background-color: var(--color-neutral-40);
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 15px;
+    padding: 1.75rem 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+div.adressAndMap {
+    display: flex;
+}
+
+
+div.contactUsForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+div.contactUsForm form button {
+    padding: 0.7rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 7px;
+    cursor: pointer;
+    color: var(--color-neutral-40);
+    background-color: #171717;
+}
+
+div.contactUsForm form input {
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.3rem;
+    color: var(--color-neutral-30);
+    background-color: var(--color-neutral-0);
+}
+
+@media screen and (max-width : 426px) {
+    div.cardContactUS {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    div.addressAndCelphone {
+        text-align: center;
+    }
+
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para telas médias e grandes (pode ser personalizado) */
+@media (min-width: 769px) {
+    div.addressAndCelphone {
+        max-width: 800px;
+        /* Define a largura máxima do conteúdo */
+        margin: 0 auto;
+        /* Centraliza o conteúdo horizontalmente */
+    }
+}

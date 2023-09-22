@@ -1,0 +1,45 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+div.banner-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 3.5rem 3rem;
+    background-color: var(--color-neutral-30);
+}
+
+h1.bannerTitle {
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 0.5rem ;
+    color: var(--color-neutral-10);
+}
+
+div.banner {
+    display: none;
+    max-height: 75vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+div.banner img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width : 425px) {
+    div.banner-container {
+        padding: 1.5rem 1.75rem;
+    }
+
+}

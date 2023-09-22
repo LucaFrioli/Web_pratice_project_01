@@ -1,0 +1,153 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+header {
+    /*define o tamanho e o background do cabeçalho*/
+    width: 100%;
+    color: var(--color-neutral-40);
+    display: block;
+}
+
+.buttonHeaderMenu {
+    /*retira a estilização padrão dos links da lista de navegação do site*/
+    text-decoration: none;
+}
+
+.headerMenu {
+    /*define a posição inicial dos items na tela, centralizando e dando espaço entre eles*/
+    background-color: var(--color-neutral-10);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+}
+
+.mobile {
+    /*corrige o alinhamento da logo com o resto do cabeçalho*/
+    width: 25%;
+}
+
+a.home {
+    text-decoration: none;
+    color: var(--color-neutral-40);
+}
+
+img.headerLogo {
+    align-self: center;
+    width: 50%;
+}
+
+span#burguer {
+    /*coloca o icone do menu mobile*/
+    display: none;
+    color: var(--color-neutral-40);
+    font-size: 2.3rem;
+    background-color: var(--color-neutral-0);
+    padding: 0.5rem;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+#menuItems {
+    /*estiliza o menu em si, que precisa estar separado para um bom funcionamento dele em mobile*/
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: center;
+    width: 75%;
+}
+
+.minimenu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+}
+
+.buttonHeaderMenu {
+    border-radius: 1rem;
+    padding: 0.7rem 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-neutral-0);
+    text-decoration: none;
+    color: var(--color-neutral-40);
+}
+
+div.login {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.login button {
+    padding: 0.7rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 0px;
+    cursor: pointer;
+}
+
+button.cart i {
+    font-size: 1.01rem;
+}
+
+/* Consulta de mídia para ajustar o estilo em telas menores */
+@media (max-width: 983px) {
+    .headerMenu {
+        flex-direction: column;
+        padding: 2rem 3.5rem;
+        gap: 2rem;
+    }
+
+
+    div.mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img.headerLogo {
+        align-self: center;
+        width: 25%; /* Substitua 200px pelo tamanho desejado */
+        height: auto; /* Isso mantém a proporção original */
+    }
+
+    span#burguer {
+        display: block;
+        max-height: 3.5rem;
+    }
+
+    #menuItems {
+        display: none;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .minimenu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.9rem;
+    }
+
+    .buttonHeaderMenu {
+        width: auto;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    div.login {
+        flex-direction: column;
+        text-align: center;
+    }
+}

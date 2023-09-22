@@ -1,0 +1,9 @@
+Página inicial (index.html):
+    Cabeçalho com o logotipo da empresa e menu de navegação. [x]
+    Banner promocional ou destaque para um produto em oferta.[/]{faltam ideias de design}
+    Seção de "Sobre nós" com uma breve descrição da empresa e seus valores.[x]
+    Seção de "Produtos em destaque" com imagens e breves descrições de alguns produtos.[x]
+    Rodapé com informações de contato e links para redes sociais.[x]
+
+
+ whidth : 983px;

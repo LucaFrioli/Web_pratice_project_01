@@ -1,0 +1,92 @@
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+}
+
+
+div.Products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 3rem 3.5rem;
+    background-color: var(--color-neutral-30);
+}
+
+div.rowProducts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 5rem;
+}
+
+div.productCard{
+    text-align: center;
+    background-color: var(--color-neutral-10);
+    color: var(--color-neutral-40);
+    padding: 1rem 1.5rem;
+    border-radius: 5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+img.responsive-img{
+    max-width: 131.58px;
+    max-height: 87.72px;
+}
+
+div.infoAndBuy{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 168px;
+}
+
+div.infoAndBuy a{
+   background-color: var(--color-neutral-40);
+   color: var(--color-neutral-0);
+   padding: 0.7rem 0.4rem;
+   border: none;
+   border-radius: 5%;
+   font-weight: 700;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+div.infoAndBuy a:hover{
+    background-color: #e4e4e4;
+}
+
+@media screen and (max-width :983px) {
+    div.rowProducts{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+        gap: 5rem;
+    }
+
+    div.productCard{
+        width: 50vw;
+        height: 75vh;
+        justify-self: center;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    div.rowProducts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div.productCard {
+        max-width: 400px; /* Defina a largura máxima desejada */
+       
+    }
+}

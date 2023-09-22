@@ -1,0 +1,5 @@
+Página de produtos (produtos.html):
+    Cabeçalho com o logotipo da empresa e menu de navegação.[x]
+    Lista de produtos disponíveis, cada um com uma imagem, nome e preço.[x]
+    Botão de "Comprar" em cada produto, que pode levar o usuário para uma página de detalhes do produto ou um formulário de pedido.[x].
+    Rodapé com informações de contato e links para redes sociais.[x]

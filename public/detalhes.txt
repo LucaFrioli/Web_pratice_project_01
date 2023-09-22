@@ -1,0 +1,5 @@
+Página de detalhes do produto (detalhes_produto.html) - expansão com CSS:
+    Cabeçalho com o logotipo da empresa e menu de navegação.[x]
+    Imagem em destaque do produto com descrição detalhada.[x]
+    Informações sobre preço, disponibilidade, avaliações dos clientes, entre outros.[x]
+    Rodapé com informações de contato e links para redes sociais.[x]
