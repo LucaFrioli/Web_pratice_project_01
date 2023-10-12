@@ -49,7 +49,7 @@ div.infoAndBuy{
     max-width: 168px;
 }
 
-div.infoAndBuy a{
+div.infoAndBuy button{
    background-color: var(--color-neutral-40);
    color: var(--color-neutral-0);
    padding: 0.7rem 0.4rem;
@@ -60,7 +60,7 @@ div.infoAndBuy a{
    text-decoration: none;
 }
 
-div.infoAndBuy a:hover{
+div.infoAndBuy button:hover{
     background-color: #e4e4e4;
 }
 

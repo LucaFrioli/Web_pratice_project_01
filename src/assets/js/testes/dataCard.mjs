@@ -76,6 +76,3 @@ export function defineDataFromPage() {//define quais cards terão conforme a pá
         return productsCardsData;
     }
 }
-
-
-//não está funcionando por algum motivo, teoricamente ES6 era para faze-lo de modo nativo, por conta de tempo, coloquei está função dentro do shadowRootProductCard
