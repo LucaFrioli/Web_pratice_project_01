@@ -34,15 +34,17 @@
                         <a href="./index.html" class="buttonHeaderMenu">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="buttonHeaderMenu">Products</a>
+                        <a href="./products.html" class="buttonHeaderMenu">Products</a>
                     </li>
                     <li>
                         <a href="./contact.html" class="buttonHeaderMenu">Contact</a>
                     </li>
                 </ul>
                 <div class="login">
-                    <span><button class="cart" id="teste"><i class="fa-solid fa-cart-arrow-down"></i></button></span>
-                    <button type="submit">login</button>
+                    <button class="cart" id="cart" onclick="redirectToCartPage()">
+                        <i class="fa-solid fa-cart-arrow-down"></i>
+                    </button>
+                    <button type="submit">login</button></span>
                 </div>
             </menu>
         </nav>
@@ -101,6 +103,21 @@
 -->
     <script src="./assets/js/shadowRootProductCard.mjs"></script>
     <script src="./assets/js/scriptMenu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttonCart = document.querySelector(`button#cart`);
+            console.log(buttonCart);
+
+            function redirectToCartPage() {
+                window.location.href = "./cart.html"; // Atribua a URL diretamente a window.location.href
+            }
+
+            // Adicione um evento de clique ao botão
+            if (buttonCart) {
+                buttonCart.addEventListener('click', redirectToCartPage);
+            }
+        });
+    </script>
 </body>
 
 </html>
