@@ -1,29 +1,37 @@
-const productList = document.querySelector(`#cartContent`);//seleciona a lista que servirá de display
+const productList = document.querySelector(`#cartContent`);
+const totalDisplay = document.querySelector(`span#totalFinal`);
 const productsArray = JSON.parse(localStorage.getItem('products')) || [];
+
 function displayProducts() {
-    // Percorrer array de produtos 
+    productList.innerHTML = '';
+
     productsArray.forEach((product, index) => {
-        const listItem = createLi(index);//cria o item da lista que servirá como receptor das infoerações 
-        const totalValue = formatTotalValue(product);//calcula e já formata o valor total inglobado no item listado
-        listItem.textContent = ` ${product.title} - Quantidade: ${product.quantity} - Valor: R$ ${totalValue} `;
+        const listItem = createLi(index);
+        const totalValue = formatTotalValue(product);
+        listItem.innerHTML = ` ${product.title} - Quantidade: ${product.quantity} - Valor: R$ <span class="totalItem"> ${totalValue} </span> `;
         const button = createButton();
         listItem.appendChild(button);
         productList.appendChild(listItem);
 
         button.addEventListener(`click`, () => {
-            removeItem(button.parentElement);
+            removeItem(listItem, product);
         });
-
     });
+
+    displayTotalF();
 }
 
-displayProducts();
+if (productsArray.length === 0) {
+    console.log(`O carrinho está vazio`);
+} else {
+    displayProducts();
+}
 
 function createLi(index = 0) {
     const li = document.createElement(`li`);
     li.classList.add(`productItem`);
     li.id = `productItem${index + 1}`;
-    return li
+    return li;
 }
 
 function createButton() {
@@ -39,13 +47,29 @@ function formatTotalValue(product) {
     return formatedValue;
 }
 
-function removeItem(productListItem) {
-    // Identificar o índice do item que queremos remover.
-    const productIndex = productsArray.indexOf(productListItem.dataset.product);
-    // Remover o item do array.
-    productsArray.splice(productIndex, 1);
-    // Atualizar o local storage com o novo array de produtos.
-    localStorage.setItem('products', JSON.stringify(productsArray));
-    // Remover o item da lista de produtos.
-    productList.removeChild(productListItem);
+function removeItem(productListItem, product) {
+    const productIndex = productsArray.indexOf(product);
+
+    if (productIndex !== -1) {
+        productsArray.splice(productIndex, 1);
+        localStorage.setItem('products', JSON.stringify(productsArray));
+        productList.removeChild(productListItem);
+        displayTotalF();
+    }
+}
+
+function displayTotalF() {
+    const total = totalOfTotals();
+    totalDisplay.textContent = ` ${total.toFixed(2)}`;
+}
+
+function totalOfTotals() {
+    const allTotals = productList.querySelectorAll(`span.totalItem`);
+    let total = 0;
+
+    allTotals.forEach((totalSpan) => {
+        total += Number(totalSpan.textContent);
+    });
+
+    return total;
 }
