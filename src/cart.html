@@ -51,6 +51,10 @@
         </nav>
     </header>
 
+    <main>
+        <ul id="cartContent" class="cartContent">
+        </ul>
+    </main>
 
     <footer>
         <div class="footer_content">
@@ -91,18 +95,17 @@
         </div>
     </footer>
 
-    <script src="./assets/js/productPage.mjs"></script>
+    <script src="./assets/js/cart.mjs"></script>
     <script src="./assets/js/scriptMenu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttonCart = document.querySelector(`button#cart`);
-            console.log(buttonCart);
 
             function redirectToCartPage() {
-                window.location.href = "./cart.html"; // Atribua a URL diretamente a window.location.href
+                window.location.href = "./cart.html";
             }
 
-            // Adicione um evento de clique ao botão
+            // Adiciona um evento de clique ao botão
             if (buttonCart) {
                 buttonCart.addEventListener('click', redirectToCartPage);
             }
