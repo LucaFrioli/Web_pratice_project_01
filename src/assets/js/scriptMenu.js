@@ -1,5 +1,6 @@
 const menuIcon = document.querySelector(`span#burguer`);
 const items = document.querySelector(`menu#menuItems`);
+const loginButton = document.querySelector(`button#login`)
 
 // Verificar e definir o estilo do menu com base na largura da janela
 function checkWindowSize() {
@@ -22,3 +23,7 @@ menuIcon.addEventListener(`click`, () => {
 });
 
 window.addEventListener("resize", checkWindowSize);
+
+loginButton.addEventListener(`click`,()=>{
+  window.location.href = "./login.html";
+});
